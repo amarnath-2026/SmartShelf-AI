@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Amazon Ember';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Amazon Ember'), local('AmazonEmber-Regular'),
+         url('https://cdn.jsdelivr.net/npm/@fontsource/open-sans@5.0.0/files/open-sans-latin-400-normal.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Amazon Ember';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local('Amazon Ember Medium'), local('AmazonEmber-Medium'),
+         url('https://cdn.jsdelivr.net/npm/@fontsource/open-sans@5.0.0/files/open-sans-latin-600-normal.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Amazon Ember';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Amazon Ember Bold'), local('AmazonEmber-Bold'),
+         url('https://cdn.jsdelivr.net/npm/@fontsource/open-sans@5.0.0/files/open-sans-latin-700-normal.woff2') format('woff2');
+  }
+
+  :root {
+    --font-amazon-ember: 'Amazon Ember', Arial, sans-serif;
+  }
+
+  html {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+  }
+
+  html.dark body {
+    background-color: #020617;
+    color: #f8fafc;
+  }
+
+  html:not(.dark) body {
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Organizational 2-Color Card Utility */
+.org-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+}
+
+.dark .org-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  color: #ffffff;
+}
