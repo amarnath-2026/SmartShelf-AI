@@ -10,9 +10,6 @@
     "db:push": "prisma db push",
     "db:seed": "npx tsx prisma/seed.ts"
   },
-  "prisma": {
-    "seed": "npx tsx prisma/seed.ts"
-  },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",
     "@prisma/client": "^6.19.3",
