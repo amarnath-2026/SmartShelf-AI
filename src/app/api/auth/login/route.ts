@@ -1,8 +1,11 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
+import { ensureDbSeeded } from '@/lib/ensureSeed';
 
 export async function POST(request: Request) {
   try {
+    await ensureDbSeeded();
+
     const { email, password } = await request.json();
 
     if (!email || !password) {
